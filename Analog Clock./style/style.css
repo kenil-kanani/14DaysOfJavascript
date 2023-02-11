@@ -1,0 +1,117 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGV2ZWxvcGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=2000&q=60");
+    background-size: cover;
+    /* background-color: salmon; */
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    position: absolute;
+    width: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+    z-index: 2;
+}
+
+.clock {
+    position: relative;
+    background-color: rgb(211, 211, 211 , 0.7);
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 251, 251);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .7);
+}
+
+.numbers div {
+    position: absolute;
+    font-size: 27px;
+    font-weight: bold;
+    color: lightgoldenrodyellow;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+}
+
+.twelve {
+    top: 6px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.three {
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.six {
+    bottom: 6px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.nine {
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+}
+
+.arrows {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrows::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-color: darkgreen;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .7);
+    z-index: 4;
+}
+
+.arrows div {
+    width: 7px;
+    height: 120px;
+    background-color: white;
+    position: absolute;
+    bottom: 50%;
+    box-shadow: 1px 1px 2px rgba(0,0,0,.7);
+    border-radius: 50% 50% 0 0;
+    transform-origin: bottom center;
+    z-index: 3;
+  }
+  
+  .arrows .hour {
+    height: 80px;
+    transform: rotate(30deg);
+  }
+  
+  .arrows .second {
+    background-color: goldenrod;
+    transform: rotate(250deg);
+  }
+
+  @media(width < 450px){
+    .clock{
+        width: 250px;
+        height: 250px;
+    }
+
+    .arrows div{
+        height: 100px;
+    }
+
+    .arrows .hour{
+        height: 65px;
+    }
+  }
